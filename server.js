@@ -26,6 +26,8 @@ app.get("/db", (req, res) => {
     res.json({ message: "Welcome to the database side! This is not database data."});
 });
 
+require("./app/routes/project.routes")(app);
+
 // set port and listen
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
