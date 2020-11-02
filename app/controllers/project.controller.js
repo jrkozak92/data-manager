@@ -34,7 +34,7 @@ exports.findOne = (req, res) => {
 };
 
 exports.findAllLinks = (req, res) => {
-    Project.findAll({ where: { link: true } })
+    Project.findAll({ where: { link: !null } })
         .then(data => {
             res.send(data);
         })
@@ -93,6 +93,10 @@ exports.update = (req, res) => {
     })
     .then(num => {
         if (num == 1) {
+            res.send({
+                message: `Successfully updated Project with id=${id}.`
+            });
+        } else {
             res.send({
                 message: `Cannot update Project with id=${id}.`
             });

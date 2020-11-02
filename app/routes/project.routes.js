@@ -17,5 +17,5 @@ module.exports = app => {
 
     router.delete("/", projects.deleteAll);
 
-    app.use('/api/projects', router);
+    app.use('/api/projects', router); // move this route to be above anything that isn't a get when ready
 };
