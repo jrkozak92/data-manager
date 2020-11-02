@@ -45,21 +45,6 @@ exports.findAllLinks = (req, res) => {
         });
 };
 
-
-// Routes that need verification go after this .use
-exports.use = (req, res, next) => {
-    const check = prompt("What's the secret password?", "Hmm...");
-
-    if (check.toLowerCase() == "secret password") {
-        return alert("Very clever. Try again.");
-    } else if (check.toLowerCase() == "duh") {
-        alert("You got it, Boss.");
-        next();
-    } else {
-        return alert("Sorry, that's not it. If you'd like to request a project be added, you can always reach out to me.");
-    }   
-};
-
 exports.create = (req, res) => {
     if (!req.body.title) {
         res.status(400).send({
