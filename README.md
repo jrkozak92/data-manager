@@ -3,11 +3,11 @@
 # Installation
 1. Clone repo or download files
 2. Navigate to directory inside Command Line or GitBash
-3. Update PostgreSQL credentials
-  3a. If you don't have PostgreSQL installed on your machine, you can download it [here](https://www.postgresql.org/download/)
-  3b. Navigate to root/app/config/db.config.js
-  3c. Update the USER and PASSWORD parameters with account credentials that have sufficient privileges to create and delete databases
-  3d. Save the db.config.js file
+3. Update PostgreSQL credentials  
+  3a. If you don't have PostgreSQL installed on your machine, you can download it [here](https://www.postgresql.org/download/)  
+  3b. Navigate to root/app/config/db.config.js  
+  3c. Update the USER and PASSWORD parameters with account credentials that have sufficient privileges to create and delete databases  
+  3d. Save the db.config.js file  
 4. Run 'node server.js' in Command Line or GitBash
 5. Navigate to 'localhost:8080/db' in a web browser
 
